@@ -19,3 +19,11 @@
 .cabecera {
   margin-bottom: 15px;
 }
+
+.icono {
+  font-size: 1.5em;
+}
+
+.icono:not(.estrella) {
+  cursor: pointer;
+}
