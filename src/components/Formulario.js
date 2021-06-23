@@ -28,13 +28,10 @@ export const Formulario = (props) => {
     setModificandoAmigo(false);
   };
 
-  console.log(urlApi);
-
   const submitearAmigo = async (e, nombre, apellido, valoracion) => {
     e.preventDefault();
 
     const amigoNuevo = { nombre, apellido, valoracion };
-
     let metodo = {};
 
     if (!modificandoAmigo) {
@@ -75,7 +72,7 @@ export const Formulario = (props) => {
   return (
     <form
       noValidate
-      className="row"
+      className="formulario row"
       onSubmit={(e) =>
         submitearAmigo(e, amigoNombre, amigoApellido, amigoValoracion)
       }
@@ -105,6 +102,7 @@ export const Formulario = (props) => {
         <select
           id="valoracion"
           value={amigoValoracion}
+          className="form-control"
           onChange={(e) => setAmigoValoracion(e.target.value)}
         >
           <option value="" hidden>
@@ -116,12 +114,18 @@ export const Formulario = (props) => {
         </select>
       </div>
       <div className="col-3">
-        <button type="submit" className="btn boton">
-          {!modificandoAmigo ? "Crear" : "Modificar"}
-        </button>
-        <button type="button" className="btn boton" onClick={cerrarFormulario}>
-          Cancelar
-        </button>
+        <div className="d-flex flex-column">
+          <button type="submit" className="btn boton boton-formulario">
+            {!modificandoAmigo ? "Crear" : "Modificar"}
+          </button>
+          <button
+            type="button"
+            className="btn boton boton-formulario"
+            onClick={cerrarFormulario}
+          >
+            Cancelar
+          </button>
+        </div>
       </div>
     </form>
   );

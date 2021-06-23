@@ -38,21 +38,24 @@ export const ListaAmigos = (props) => {
   return (
     <ul className="lista-amigos row">
       {listaAmigos.map((amigo) => (
-        <li key={amigo.id} className="list-unstyled col-3">
-          <div className="card-amigo">
-            <span>
+        <li key={amigo.id} className="col-3">
+          <div className="card-amigo row align-items-center">
+            <span className="col-12">
               Nombre: <span>{amigo.nombre}</span>
             </span>
-            <span>
+            <span className="col-12">
               Apellido: <span>{amigo.apellido}</span>
             </span>
-            <span>
+            <span className="col-12">
               Valoración:
               <span>{printarEstrellas(amigo.valoracion)}</span>
             </span>
-            <FaTimes className="icono" onClick={() => borrarAmigo(amigo.id)} />
+            <FaTimes
+              className="icono cruz"
+              onClick={() => borrarAmigo(amigo.id)}
+            />
             <FaPencilAlt
-              className="icono"
+              className="icono lapiz"
               onClick={() => modificarAmigo(amigo)}
             />
           </div>

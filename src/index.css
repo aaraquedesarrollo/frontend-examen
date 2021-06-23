@@ -7,13 +7,23 @@
   color: white;
 }
 
+.boton-formulario {
+  margin: 5px;
+}
+
 .card-amigo {
   background-color: var(--color-principal);
   color: white;
+  height: 200px;
+  margin-bottom: 35px;
+  padding: 10px;
+  position: relative;
+  border-radius: 15px;
 }
 
 .lista-amigos {
-  padding: 0;
+  list-style: none;
+  padding: inherit;
 }
 
 .cabecera {
@@ -21,9 +31,24 @@
 }
 
 .icono {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .icono:not(.estrella) {
   cursor: pointer;
+  position: absolute;
+  top: 28px;
+}
+
+.icono.cruz {
+  right: 8px;
+}
+
+.icono.lapiz {
+  right: 33px;
+}
+
+.formulario input,
+.formulario select {
+  border-color: var(--color-principal);
 }
