@@ -24,6 +24,7 @@
 .lista-amigos {
   list-style: none;
   padding: inherit;
+  justify-content: space-between;
 }
 
 .cabecera {
