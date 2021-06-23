@@ -1,0 +1,21 @@
+:root {
+  --color-principal: #483d8b;
+}
+
+.boton {
+  background-color: var(--color-principal);
+  color: white;
+}
+
+.card-amigo {
+  background-color: var(--color-principal);
+  color: white;
+}
+
+.lista-amigos {
+  padding: 0;
+}
+
+.cabecera {
+  margin-bottom: 15px;
+}
